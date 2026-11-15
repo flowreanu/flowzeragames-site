@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9fbff"/><stop offset=".55" stop-color="#5ff3ff"/><stop offset="1" stop-color="#7c5cff"/></linearGradient></defs><path d="M32 4 58 30 32 60 6 30Z" fill="url(#g)"/><path d="M32 4 58 30 32 34Z" fill="#3a22b8" opacity=".75"/><path d="M6 30 32 34 32 60Z" fill="#6a4cff" opacity=".85"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+ <defs>
+  <linearGradient id="bub" x1="0.05" y1="0" x2="0.95" y2="1">
+   <stop offset="0" stop-color="#5ff3ff"/><stop offset=".48" stop-color="#7c5cff"/><stop offset="1" stop-color="#ff4d8d"/>
+  </linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <mask id="cut">
+   <rect width="200" height="200" fill="#fff"/>
+   <path d="M114 34 L92 86 L112 86 L90 150" fill="none" stroke="#000" stroke-width="11" stroke-linejoin="miter" stroke-linecap="square"/>
+  </mask>
+ </defs>
+ <path d="M64 20 H140 A42 42 0 0 1 182 62 V116 A42 42 0 0 1 140 158 H84 L52 182 Q45 187 47 179 L52 156 A42 42 0 0 1 22 116 V62 A42 42 0 0 1 64 20 Z" fill="url(#bub)"/>
+ <path d="M64 20 H140 A42 42 0 0 1 182 62 V78 Q102 60 22 92 V62 A42 42 0 0 1 64 20 Z" fill="url(#shine)"/>
+ <g mask="url(#cut)">
+  <path d="M80 52 Q74 49 74 56 V122 Q74 129 80 126 L140 95 Q146 89 140 85 Z" fill="#fff"/>
+ </g>
+</svg>
