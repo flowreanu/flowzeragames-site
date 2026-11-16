@@ -371,8 +371,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
       <div class="tile t1 reveal">
         <div class="big">10,000+</div>
         <h3>Questions that don't repeat</h3>
-        <p>A huge bank weighted across four categories, with flags, emoji puzzles and word scrambles on top. Stream every day and it still feels fresh.</p>
-        <div class="cats"><span>🧠 Trivia</span><span>🌍 Geography</span><span>🔬 Science</span><span>➗ Math &amp; Logic</span><span>😀 Emoji</span><span>🔤 Scramble</span></div>
+        <p>A huge bank across six categories, with flags, emoji puzzles and word scrambles on top. Stream every day and it still feels fresh.</p>
+        <div class="cats"><span>🧠 Trivia</span><span>🌍 Geography</span><span>🔬 Science</span><span>➗ Math &amp; Logic</span><span>🎬 Movies</span><span>🏛️ History</span><span>😀 Emoji</span><span>🔤 Scramble</span></div>
       </div>
       <div class="tile t2 reveal">
         <h3>Ranks &amp; weekly champion</h3>
@@ -381,8 +381,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
       </div>
       <div class="tile t3 reveal">
         <h3>Viewer shop</h3>
-        <p>Viewers spend their points with chat commands.</p>
-        <div class="cmds"><div><code>!5050</code><span>400</span></div><div><code>!x2</code><span>600</span></div><div><code>!shoutout</code><span>1,000</span></div><div><code>!color</code><span>2,500</span></div><div><code>!me</code><span>free</span></div></div>
+        <p>Viewers just type the word in chat, no "!" needed.</p>
+        <div class="cmds"><div><code>50</code><span>400</span></div><div><code>x2</code><span>600</span></div><div><code>rank</code><span>free</span></div><div><code>shop</code><span>free</span></div><div><code>pink</code><span>name color</span></div></div>
       </div>
       <div class="tile t4 reveal">
         <h3>Tap Tap x2</h3>
@@ -466,7 +466,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <details><summary>Do I need TikFinity or any paid tool?</summary><p>No. MIND RUSH includes a small connector that reads your LIVE chat, likes, follows and gifts directly from your username. Nothing else to buy or subscribe to.</p></details>
     <details><summary>Does it work on a phone-only stream?</summary><p>No. The game runs on a Windows PC and is shown on stream with Window Capture in TikTok LIVE Studio or OBS. Your viewers can watch and play from any phone.</p></details>
     <details><summary>Is the leaderboard saved between streams?</summary><p>Yes. Points, ranks and weekly champions are saved on your PC, with automatic backups, so your community keeps climbing every LIVE.</p></details>
-    <details><summary>What do viewers need to do?</summary><p>Just comment A, B, C or D. Shop commands like !x2 or !5050 are optional extras for regulars who've saved up points.</p></details>
+    <details><summary>What do viewers need to do?</summary><p>Follow the streamer, then comment A, B, C or D. Commands like x2 or 50 are optional extras for regulars who've saved up points, and typing a color like pink colors their name.</p></details>
     <details><summary>Can I use my webcam with it?</summary><p>Yes. There's a built-in camera circle next to the logo. You can use your webcam, a green-screen hole, or turn it off.</p></details>
     <details><summary>Is this made by TikTok?</summary><p>No. FlowZeraGames is an independent creator and is not affiliated with or endorsed by TikTok. Follow TikTok's LIVE guidelines when you stream.</p></details>
   </div>
@@ -498,7 +498,7 @@ $('mq').innerHTML=[...words,...words].map(w=>`<span>${w} ✦</span>`).join('');
 const hs=[...document.querySelectorAll('.hs')]; let hi=0;
 setInterval(()=>{hs[hi].style.opacity=0; hi=(hi+1)%hs.length; hs[hi].style.opacity=1;},3600);
 const bots=[['luna.vibes','#6c5cff'],['max_power','#ff9f1c'],['ana.star','#22c55e'],['kevin_pro','#ec4899'],['sara.b','#06b6d4'],['quizking','#f43f5e'],['emma.ly','#a855f7'],['nova.q','#eab308']];
-const lines=['D','D!!','d','B?','D 🍌','yellow obv','D','!me','A','D D','!x2','gg'];
+const lines=['D','D!!','d','B?','D 🍌','yellow obv','D','rank','A','pink','x2','gg'];
 const hc=$('heroChat');
 setInterval(()=>{const b=bots[Math.random()*bots.length|0]; const m=document.createElement('div'); m.className='msg';
   m.innerHTML=`<i style="background:${b[1]}"></i><b>${b[0]}</b> ${lines[Math.random()*lines.length|0]}`; hc.appendChild(m); while(hc.children.length>7) hc.firstChild.remove();},900);
