@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FlowZeraGames — Interactive games for TikTok LIVE</title>
-<meta name="description" content="MIND RUSH turns your TikTok LIVE into a game show. Viewers answer in chat with A, B, C or D, race for speed points and climb an all-time leaderboard. One-time purchase, plug & play on Windows.">
-<meta property="og:title" content="MIND RUSH — the quiz game your viewers play from the chat">
-<meta property="og:description" content="Interactive quiz game for TikTok LIVE. 10,000+ questions, speed rounds, leaderboard, viewer shop. By FlowZeraGames.">
+<meta name="description" content="Interactive games for TikTok LIVE: MIND RUSH (quiz game show), FlowZera PARTY PACK (3 party games) and NITRO RALLY (3D kart racing). Your viewers play from the chat. Free 7-day trial, then $5/month per game.">
+<meta property="og:title" content="FlowZeraGames — games your TikTok LIVE viewers play from the chat">
+<meta property="og:description" content="MIND RUSH 2.0, PARTY PACK and NITRO RALLY. Interactive games for TikTok LIVE. Free 7-day trial, then $5/month per game.">
 <meta property="og:image" content="https://flowzeragames.vercel.app/assets/og.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://flowzeragames.vercel.app/">
@@ -246,6 +246,54 @@ details p{padding:0 4px 24px;color:var(--mute);max-width:720px}
 footer{border-top:1px solid var(--line);padding:40px 0;color:var(--mute);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
 
+
+/* v2: three games, trial pricing */
+.games{grid-template-columns:repeat(3,1fr)}
+.game{min-height:680px}
+.game .shot{position:absolute;right:26px;top:28px;width:min(160px,42%);transform:rotate(6deg);border-radius:24px;box-shadow:0 30px 60px rgba(0,0,0,.5);border:7px solid #1d1b29}
+.game.mr .shot{right:26px;width:min(160px,42%)}
+.game.mr img.logo{width:min(220px,48%);top:40px;left:24px}
+.game p{max-width:none}
+.game .ttl{position:absolute;left:28px;top:44px;font-family:Bungee;font-size:34px;line-height:.95;max-width:48%}
+.game.pp{background:radial-gradient(420px 340px at 80% 20%,rgba(255,60,200,.38),transparent 70%),linear-gradient(160deg,#2a0b4a,#0c0624)}
+.game.pp .ttl{background:linear-gradient(180deg,#ff9cf0,#ff3dbb);-webkit-background-clip:text;background-clip:text;color:transparent}
+.game.nr{background:radial-gradient(420px 340px at 80% 20%,rgba(255,170,40,.35),transparent 70%),linear-gradient(160deg,#2b1405,#0d0718)}
+.game.nr .ttl{background:linear-gradient(180deg,#fff27a,#ff9a1f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.game .gtags{display:flex;flex-wrap:wrap;gap:6px;margin:-8px 0 20px}
+.game .gtags span{font-size:12px;font-weight:800;letter-spacing:1px;padding:4px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+.game .gbtns{display:flex;gap:10px;flex-wrap:wrap}
+.btn-sm{padding:12px 18px;font-size:15px}
+.pill.new{background:rgba(95,243,255,.12);color:var(--cyan);border:1px solid rgba(95,243,255,.4)}
+@media(max-width:1100px){.games{grid-template-columns:1fr 1fr}.game.mr{grid-column:1/-1}}
+@media(max-width:700px){.games{grid-template-columns:1fr}.game .shot{width:min(150px,40%)}}
+/* game showcase rows */
+.show{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center}
+.show.rev{grid-template-columns:1.25fr 1fr}
+.show.rev .copy{order:2}
+.show .phones{display:flex;gap:18px;justify-content:center}
+.show .phones .phone{width:200px;border-radius:32px;padding:8px;box-shadow:0 24px 60px rgba(0,0,0,.5);flex:none}
+.show .phones .phone:nth-child(2){transform:translateY(-26px)}
+.show .phones .phone .scr{border-radius:25px}
+.show .phones .phone .notch{top:15px;width:60px;height:17px}
+.show ul{list-style:none;display:grid;gap:12px;margin:22px 0 28px}
+.show li{display:flex;gap:12px;font-weight:600;color:var(--mute)}
+.show li b{color:var(--text)}
+.show li .ic{flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.07);font-size:18px}
+.sec.pp{background:radial-gradient(700px 480px at 80% 50%,rgba(255,60,200,.16),transparent 70%)}
+.sec.nr{background:radial-gradient(700px 480px at 20% 50%,rgba(255,160,40,.14),transparent 70%)}
+.sec.pp .head h2 em{color:#ff6ad5}.sec.nr .head h2 em{color:#ffb21e}
+@media(max-width:1000px){.show,.show.rev{grid-template-columns:1fr}.show.rev .copy{order:0}.show .phones{gap:10px}.show .phones .phone{width:31%;min-width:0;padding:5px;border-radius:20px}.show .phones .phone .scr{border-radius:16px}.show .phones .phone .notch{display:none}}
+/* pricing v2 */
+.plans{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 6px}
+.plan{border-radius:16px;padding:12px 12px 12px 18px;background:rgba(0,0,0,.25);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
+.plan h4{font-family:Bungee;font-size:18px;letter-spacing:.5px}
+.pcard .plan .btn{width:auto;padding:11px 20px;font-size:15px}
+.trialbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 2px}
+.trialbar .t7{font-family:Bungee;font-size:15px;padding:8px 14px;border-radius:12px;background:linear-gradient(135deg,#7ef9ff,var(--violet));color:#fff}
+.pcard.wide{grid-column:1/-1}
+.pcard .amt .per{font-size:34px}
+@media(max-width:900px){.plans{grid-template-columns:1fr}}
+
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
@@ -258,8 +306,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <img src="assets/flowzera-mark.svg" alt="" width="38" height="38">
     <span class="bw"><span class="bt">FLOW<i>ZERA</i></span><span class="bg">GAMES</span></span>
   </a>
-  <div class="links"><a href="#play">Try it</a><a href="#how">How it works</a><a href="#games">Games</a><a href="#faq">FAQ</a></div>
-  <a class="btn btn-gold buy" href="https://flowzeragames.gumroad.com/l/mindrush">Get MIND RUSH</a>
+  <div class="links"><a href="#play">Try it</a><a href="#games">Games</a><a href="#partypack">Party Pack</a><a href="#nitro">Nitro Rally</a><a href="#price">Pricing</a><a href="#faq">FAQ</a></div>
+  <a class="btn btn-gold buy" href="#price">Free 7-day trial</a>
 </div></nav>
 
 <header class="hero" id="top">
@@ -268,24 +316,26 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <div>
       <div class="kicker">Interactive games for TikTok LIVE</div>
       <h1 class="disp">Your chat<span class="o">is the</span><span class="g">controller</span></h1>
-      <p class="lead">MIND RUSH turns your LIVE into a game show. Viewers type <b>A, B, C or D</b> in the comments, race for speed points and fight for a leaderboard that never resets.</p>
+      <p class="lead"><b>MIND RUSH 2.0</b> turns your LIVE into a game show: viewers type <b>A, B, C or D</b>, race for speed points, fight a <b>Boss</b> together and settle it in a <b>Final Duel</b>. Plus the <b>Party Pack</b> and <b>Nitro Rally</b>.</p>
       <div class="cta">
-        <a class="btn btn-gold buy" href="https://flowzeragames.gumroad.com/l/mindrush">Get MIND RUSH — $4.99</a>
+        <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try MIND RUSH free for 7 days</a>
         <a class="btn btn-ghost" href="#play">▶ Play a round</a>
       </div>
-      <div class="trust"><span>One-time purchase</span><span>No TikFinity needed</span><span>Setup in 2 minutes</span></div>
+      <div class="trust"><span>7 days free</span><span>Then $5/month per game</span><span>Cancel anytime</span><span>No TikFinity needed</span></div>
     </div>
     <div style="position:relative">
       <div class="phone" aria-label="MIND RUSH running on a phone">
         <div class="notch"></div>
         <div class="scr">
-          <img src="assets/shot-question.webp" alt="MIND RUSH question screen" class="hs" style="opacity:1">
-          <img src="assets/shot-reveal.webp" alt="MIND RUSH answer reveal with results" class="hs" style="opacity:0">
+          <img src="assets/mr-question.webp" alt="MIND RUSH question screen" class="hs" style="opacity:1">
+          <img src="assets/mr-reveal.webp" alt="MIND RUSH answer reveal with results" class="hs" style="opacity:0">
+          <img src="assets/mr-boss.webp" alt="MIND RUSH boss question" class="hs" style="opacity:0">
+          <img src="assets/mr-duel2.webp" alt="MIND RUSH final duel" class="hs" style="opacity:0">
           <div class="chat" id="heroChat"></div>
         </div>
       </div>
-      <div class="sticker"><small>READY TO STREAM</small>PLUG &amp; PLAY</div>
-      <div class="sticker sticker2"><small>OVER</small>10,000 Qs</div>
+      <div class="sticker"><small>NEW VERSION</small>MIND RUSH 2.0</div>
+      <div class="sticker sticker2"><small>OVER</small>12,000 Qs</div>
     </div>
   </div>
 </header>
@@ -320,7 +370,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
           <h3 class="disp" id="dTitle">Ready to rush?</h3>
           <p id="dText">5 questions · 10 seconds each · 7 bots in the chat</p>
           <button class="btn btn-gold" id="dStart">▶ Start round</button>
-          <div id="dBuy" hidden style="margin-top:14px"><a class="btn btn-ghost buy" href="https://flowzeragames.gumroad.com/l/mindrush">Put this on your LIVE →</a></div>
+          <div id="dBuy" hidden style="margin-top:14px"><a class="btn btn-ghost buy" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Put this on your LIVE · 7 days free →</a></div>
         </div>
       </div>
     </div>
@@ -332,11 +382,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <div class="head reveal">
       <div class="kicker">How it works</div>
       <h2 class="disp">Live in <em>3 steps</em></h2>
-      <p>No coding, no paid tools, no browser extensions. It runs on your PC and reads your LIVE chat directly.</p>
+      <p>No coding, no paid tools, no browser extensions. Every game runs on your PC and reads your LIVE chat directly.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><h3>Download &amp; unzip</h3><p>Get the pack from Gumroad and unzip it anywhere on your Windows PC.</p></div>
-      <div class="step reveal"><h3>Run START.bat</h3><p>Type your TikTok username once. It installs what it needs and opens the game window. Then <code>Go LIVE</code>.</p></div>
+      <div class="step reveal"><h3>Start your free trial</h3><p>Email us which game you want. You get the download and a personal license key: 7 days free, then $5/month. Cancel anytime.</p></div>
+      <div class="step reveal"><h3>Run START.bat</h3><p>Type your TikTok username once and paste your key. It installs what it needs and opens the game window. Then <code>Go LIVE</code>.</p></div>
       <div class="step reveal"><h3>Capture the window</h3><p>Add the game as a Window Capture in TikTok LIVE Studio or OBS. Your viewers start playing straight away.</p></div>
     </div>
   </div>
@@ -345,19 +395,22 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 <section class="sec rounds" style="padding-top:40px">
   <div class="wrap">
     <div class="head reveal">
-      <div class="kicker">Inside every game</div>
-      <h2 class="disp">15 questions. <em>5 twists.</em></h2>
-      <p>Every game climbs from easy to brutal and switches it up so nobody scrolls away.</p>
+      <div class="kicker">MIND RUSH 2.0 · inside every game</div>
+      <h2 class="disp">15 questions. <em>8 twists.</em></h2>
+      <p>Questions and answers sit at the top of the screen, so the TikTok chat never covers them. Swipe through a full game.</p>
     </div>
     <div class="strip-nav"><button data-d="-1" aria-label="Previous">←</button><button data-d="1" aria-label="Next">→</button></div>
   </div>
   <div class="strip" id="strip">
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-question.webp" alt="Main quiz question"></div></div><h3>The climb</h3><p>Trivia, geography with flags, science and math. Easy at first, then hard.</p><span class="tag">10,000+ QUESTIONS</span></div>
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-vote.webp" alt="Warm-up category vote"></div></div><h3>Warm-up vote</h3><p>Viewers send small gifts to pick the next category. A tie spins the roulette.</p><span class="tag">AFTER Q5</span></div>
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-emoji.webp" alt="Speed emoji round"></div></div><h3>Speed emoji</h3><p>Three emoji puzzles, eight seconds each. Pure reflex.</p><span class="tag">1,000+ PUZZLES</span></div>
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-scramble.webp" alt="Scramble word round"></div></div><h3>Scramble</h3><p>Unscramble the word before the clock runs out.</p><span class="tag">1,000+ WORDS</span></div>
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-redintro.webp" alt="The Red Question intro"></div></div><h3>The Red Question</h3><p>A dramatic intro, then the hardest question for the biggest points.</p><span class="tag">FINAL · 400 BASE</span></div>
-    <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/shot-lobby.webp" alt="Lobby screen with countdown"></div></div><h3>Lobby &amp; end show</h3><p>A countdown lobby gathers players. At the end, a one-minute show crowns the winners.</p><span class="tag">BUILT-IN PACING</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-question.webp" alt="The climb"></div></div><h3>The climb</h3><p>15 questions from easy to brutal: trivia, geography with flags, science, math, movies and history.</p><span class="tag">12,000+ QUESTIONS</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-vote.webp" alt="Category vote"></div></div><h3>Category vote</h3><p>Viewers just type a category in the chat. One vote each, most votes picks the next 4 questions.</p><span class="tag">AFTER Q5 · NO GIFTS</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-emoji.webp" alt="Speed emoji"></div></div><h3>Speed emoji</h3><p>Emoji puzzles, ten seconds each. Pure reflex.</p><span class="tag">1,000+ PUZZLES</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-boss.webp" alt="Boss question"></div></div><h3>Boss question</h3><p>A brutal question the whole chat fights together. If 60% get it right, everyone who answered gets +300.</p><span class="tag">NEW · TEAM ROUND</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-mystery.webp" alt="Mystery words"></div></div><h3>Mystery words</h3><p>A riddle and a hidden word. A new letter appears every few seconds. Guess early, score more.</p><span class="tag">NEW · RIDDLES</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-scramble.webp" alt="Scramble"></div></div><h3>Scramble</h3><p>Unscramble the word before the clock runs out.</p><span class="tag">1,000+ WORDS</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-redintro.webp" alt="The Red Question"></div></div><h3>The Red Question</h3><p>A dramatic intro, then the hardest question for the biggest points.</p><span class="tag">FINAL · 400 BASE</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-duel.webp" alt="Final duel"></div></div><h3>Final duel</h3><p>If 1st and 2nd are close, a western showdown decides the game: Quick Draw, then Closest Number.</p><span class="tag">NEW · WINNER TAKES ALL</span></div>
+      <div class="card"><div class="phone"><div class="notch"></div><div class="scr"><img src="assets/mr-lobby.webp" alt="Lobby &amp; end show"></div></div><h3>Lobby &amp; end show</h3><p>A countdown lobby gathers players. At the end, a one-minute show crowns the winners.</p><span class="tag">BUILT-IN PACING</span></div>
   </div>
 </section>
 
@@ -369,7 +422,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     </div>
     <div class="bento">
       <div class="tile t1 reveal">
-        <div class="big">10,000+</div>
+        <div class="big">12,000+</div>
         <h3>Questions that don't repeat</h3>
         <p>A huge bank across six categories, with flags, emoji puzzles and word scrambles on top. Stream every day and it still feels fresh.</p>
         <div class="cats"><span>🧠 Trivia</span><span>🌍 Geography</span><span>🔬 Science</span><span>➗ Math &amp; Logic</span><span>🎬 Movies</span><span>🏛️ History</span><span>😀 Emoji</span><span>🔤 Scramble</span></div>
@@ -381,8 +434,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
       </div>
       <div class="tile t3 reveal">
         <h3>Viewer shop</h3>
-        <p>Viewers just type the word in chat, no "!" needed.</p>
-        <div class="cmds"><div><code>50</code><span>400</span></div><div><code>x2</code><span>600</span></div><div><code>rank</code><span>free</span></div><div><code>shop</code><span>free</span></div><div><code>pink</code><span>name color</span></div></div>
+        <p>Viewers type the word in chat. <b>Shield</b> saves a streak, <b>Freeze</b> gives the leader 0 points. x2, Shield and Freeze: once per game.</p>
+        <div class="cmds"><div><code>50</code><span>400</span></div><div><code>x2</code><span>600</span></div><div><code>shield</code><span>500</span></div><div><code>freeze</code><span>800</span></div><div><code>rank</code><span>free</span></div><div><code>pink</code><span>name color</span></div></div>
       </div>
       <div class="tile t4 reveal">
         <h3>Tap Tap x2</h3>
@@ -404,23 +457,83 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <div class="head reveal">
       <div class="kicker">The games</div>
       <h2 class="disp">Made by <em>FlowZeraGames</em></h2>
-      <p>Interactive games built for vertical LIVE, tested on real streams.</p>
+      <p>Interactive games built for vertical LIVE, tested on real streams. Every game has its own 7-day free trial.</p>
     </div>
     <div class="games">
       <div class="game mr reveal">
         <img class="logo" src="assets/mindrush-logo.webp" alt="MIND RUSH logo">
-        <img class="shot" src="assets/shot-red.webp" alt="">
-        <span class="pill on">● AVAILABLE NOW</span>
+        <img class="shot" src="assets/mr-duel2.webp" alt="">
+        <span class="pill new">● NEW · VERSION 2.0</span>
         <h3>MIND RUSH</h3>
-        <p>The speed quiz game show. Chat answers, speed scores, streaks multiply.</p>
-        <a class="btn btn-gold buy" href="https://flowzeragames.gumroad.com/l/mindrush" style="width:max-content">Get it — $4.99</a>
+        <p>The speed quiz game show. Chat answers, speed scores, streaks multiply. Now with the Boss Question, Mystery Words and the Final Duel.</p>
+        <div class="gtags"><span>QUIZ</span><span>12,000+ QUESTIONS</span><span>LEADERBOARD</span></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#play">Play a round</a></div>
       </div>
-      <div class="game egg reveal">
-        <div class="eggart" aria-hidden="true"></div>
-        <span class="pill soon">◐ COMING SOON</span>
-        <h3>THE EGG</h3>
-        <p>A giant egg that your viewers hatch together. What's inside? Nobody knows yet.</p>
+      <div class="game pp reveal">
+        <div class="ttl">PARTY<br>PACK</div>
+        <img class="shot" src="assets/pp-hub.webp" alt="">
+        <span class="pill on">● AVAILABLE NOW</span>
+        <h3>PARTY PACK</h3>
+        <p>Three party games in one: PUNCHLINE, HIVEMIND and WHAT YEAR?. The chat votes which one comes next.</p>
+        <div class="gtags"><span>3 GAMES</span><span>CHAT VOTES</span><span>JACKBOX-STYLE</span></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#partypack">See it</a></div>
       </div>
+      <div class="game nr reveal">
+        <div class="ttl">NITRO<br>RALLY</div>
+        <img class="shot" src="assets/nr-race2.webp" alt="">
+        <span class="pill on">● AVAILABLE NOW</span>
+        <h3>NITRO RALLY</h3>
+        <p>A 3D kart race your viewers join from the chat. Up to 24 racers, 3 laps, nitro and surprise super powers.</p>
+        <div class="gtags"><span>3D RACING</span><span>24 RACERS</span><span>PODIUM</span></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#nitro">See it</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec pp" id="partypack" style="padding-top:60px">
+  <div class="wrap show">
+    <div class="copy reveal">
+      <div class="head" style="margin-bottom:0">
+        <div class="kicker">FlowZera Party Pack</div>
+        <h2 class="disp">Three games. <em>One party.</em></h2>
+        <p>Jackbox-style games built for a chat full of people. The hub lets viewers vote which game comes next, then it all runs by itself.</p>
+      </div>
+      <ul>
+        <li><span class="ic">🎤</span><div><b>PUNCHLINE.</b> Viewers type the funniest ending. You pick the best ones, the chat votes the winner.</div></li>
+        <li><span class="ic">🐝</span><div><b>HIVEMIND.</b> Yes or no? Guess what most of the chat answers.</div></li>
+        <li><span class="ic">⏳</span><div><b>WHAT YEAR?</b> Type the year it happened. Closest guess wins.</div></li>
+        <li><span class="ic">🏆</span><div><b>Own leaderboard + Host Panel.</b> A separate control window just for you.</div></li>
+      </ul>
+      <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try the Party Pack free for 7 days</a>
+    </div>
+    <div class="phones reveal">
+      <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/pp-punch.webp" alt="PUNCHLINE"></div></div>
+      <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/pp-hub.webp" alt="Party Pack hub vote"></div></div>
+      <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/pp-hive.webp" alt="HIVEMIND"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec nr" id="nitro" style="padding-top:60px">
+  <div class="wrap show rev">
+    <div class="copy reveal">
+      <div class="head" style="margin-bottom:0">
+        <div class="kicker">Nitro Rally</div>
+        <h2 class="disp">Type join. <em>Race.</em></h2>
+        <p>A 3D kart racer for TikTok LIVE. Viewers type <b>join</b> to grab a kart, then the whole chat watches them race three laps for the podium.</p>
+      </div>
+      <ul>
+        <li><span class="ic">🏎️</span><div><b>Up to 24 racers.</b> Short 3-lap rounds, a new race every few minutes.</div></li>
+        <li><span class="ic">⚡</span><div><b>Nitro and super powers.</b> Rocket boost, ice blast, tornado, warp jump and more fire at random.</div></li>
+        <li><span class="ic">🎥</span><div><b>A camera that tells the story.</b> It follows the action and zooms on the winner in the last seconds.</div></li>
+        <li><span class="ic">🏅</span><div><b>Podium + all-time leaderboard.</b> Saved on your PC with automatic backups.</div></li>
+      </ul>
+      <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try Nitro Rally free for 7 days</a>
+    </div>
+    <div class="phones reveal">
+      <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/nr-race2.webp" alt="Nitro Rally race"></div></div>
+      <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/nr-race.webp" alt="Nitro Rally lobby"></div></div>
     </div>
   </div>
 </section>
@@ -429,31 +542,36 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
   <div class="wrap">
     <div class="head reveal">
       <div class="kicker">Pricing</div>
-      <h2 class="disp">One price. <em>Yours forever.</em></h2>
+      <h2 class="disp">Try it free. <em>Then $5.</em></h2>
+      <p>Every game comes with a 7-day free trial. After that it's $5 a month per game. Cancel anytime, just send us an email.</p>
     </div>
     <div class="price">
       <div class="pcard reveal">
-        <div class="kicker" style="color:var(--gold)">MIND RUSH · Creator license</div>
-        <div class="amt">$4.99<small>one-time</small></div>
+        <div class="kicker" style="color:var(--gold)">Creator license · per game</div>
+        <div class="trialbar"><span class="t7">7 DAYS FREE</span><span style="color:var(--mute);font-weight:700">then</span></div>
+        <div class="amt">$5<small>/ month</small></div>
         <ul>
-          <li>The full game + 10,000+ questions</li>
-          <li>Speed emoji, scramble and warm-up rounds</li>
+          <li>The full game and every update</li>
+          <li>Your own license key, linked to your TikTok account</li>
           <li>All-time leaderboard with automatic backups</li>
-          <li>Viewer shop, ranks, weekly champion</li>
           <li>Direct chat connection, no TikFinity</li>
-          <li>Built-in camera circle</li>
+          <li>Cancel anytime, no contract</li>
         </ul>
-        <a class="btn btn-gold buy" href="https://flowzeragames.gumroad.com/l/mindrush">Buy on Gumroad</a>
-        <div class="fine">Secure checkout by Gumroad · Instant download</div>
+        <div class="plans">
+          <div class="plan"><h4>MIND RUSH</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
+          <div class="plan"><h4>PARTY PACK</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
+          <div class="plan"><h4>NITRO RALLY</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
+        </div>
+        <div class="fine">Click a game to email us at <b>andreitufaru@proton.me</b> · You get the download and your license key by email</div>
       </div>
       <div class="req reveal">
         <h3>What you need</h3>
         <dl>
-          <div><dt>💻 Windows 10 or 11 PC</dt><dd>The game runs on the computer you stream from.</dd></div>
-          <div><dt>🌐 Google Chrome</dt><dd>Opens the game in its own clean window.</dd></div>
+          <div><dt>💻 Windows 10 or 11 PC</dt><dd>The games run on the computer you stream from.</dd></div>
+          <div><dt>🌐 Google Chrome or Edge + internet</dt><dd>Opens the game in its own clean window. The license is checked online.</dd></div>
           <div><dt>⚙️ Node.js</dt><dd>Free. The installer helps you get it automatically.</dd></div>
           <div><dt>🎥 TikTok LIVE Studio or OBS</dt><dd>Plus LIVE access on your TikTok account.</dd></div>
-          <div><dt>📄 License</dt><dd>One creator / one TikTok account. No resale or redistribution.</dd></div>
+          <div><dt>📄 License</dt><dd>One key = one creator / one TikTok account. No sharing, resale or redistribution.</dd></div>
         </dl>
       </div>
     </div>
@@ -463,26 +581,29 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 <section class="sec" id="faq" style="padding-top:60px">
   <div class="wrap faq">
     <div class="head reveal"><div class="kicker">FAQ</div><h2 class="disp">Questions?</h2></div>
-    <details><summary>Do I need TikFinity or any paid tool?</summary><p>No. MIND RUSH includes a small connector that reads your LIVE chat, likes, follows and gifts directly from your username. Nothing else to buy or subscribe to.</p></details>
-    <details><summary>Does it work on a phone-only stream?</summary><p>No. The game runs on a Windows PC and is shown on stream with Window Capture in TikTok LIVE Studio or OBS. Your viewers can watch and play from any phone.</p></details>
+    <details><summary>How does the free trial work?</summary><p>Send us an email (any "Start trial" button opens it) with the game you want and your TikTok username. You get the download and a personal license key by email and can play for 7 days for free. After that it's $5 a month per game. If you stop paying, the key stops working at the end of the period you paid for.</p></details>
+    <details><summary>Why do I need a license key?</summary><p>The key unlocks the game files and links the game to your TikTok account. It's how we keep the games fair for the creators who pay for them. The game checks the key when it starts and every few minutes. If your internet drops, it keeps running for 30 minutes.</p></details>
+    <details><summary>Can I use one key on two TikTok accounts?</summary><p>No. One key works for one creator and one TikTok account. If you change your account, contact us and we'll move it.</p></details>
+    <details><summary>Do I need TikFinity or any paid tool?</summary><p>No. Each game includes a small connector that reads your LIVE chat, likes, follows and gifts directly from your username. You don't need to buy anything else.</p></details>
+    <details><summary>Does it work on a phone-only stream?</summary><p>No. The games run on a Windows PC and are shown on stream with Window Capture in TikTok LIVE Studio or OBS. Your viewers can watch and play from any phone.</p></details>
     <details><summary>Is the leaderboard saved between streams?</summary><p>Yes. Points, ranks and weekly champions are saved on your PC, with automatic backups, so your community keeps climbing every LIVE.</p></details>
-    <details><summary>What do viewers need to do?</summary><p>Follow the streamer, then comment A, B, C or D. Commands like x2 or 50 are optional extras for regulars who've saved up points, and typing a color like pink colors their name.</p></details>
-    <details><summary>Can I use my webcam with it?</summary><p>Yes. There's a built-in camera circle next to the logo. You can use your webcam, a green-screen hole, or turn it off.</p></details>
+    <details><summary>What's new in MIND RUSH 2.0?</summary><p>A new layout with the questions at the top, the Boss Question, Mystery Words with letters that appear by themselves, the Final Duel, Shield and Freeze commands, a category vote by typing (no gifts), and a x4 limit on the multiplier so scores stay fair.</p></details>
+    <details><summary>Should I show my camera?</summary><p>Yes, we strongly recommend it. TikTok can restrict LIVEs that only show a game with no creator. Turn your camera on, talk to your viewers and react to the game. MIND RUSH has a built-in camera circle.</p></details>
     <details><summary>Is this made by TikTok?</summary><p>No. FlowZeraGames is an independent creator and is not affiliated with or endorsed by TikTok. Follow TikTok's LIVE guidelines when you stream.</p></details>
   </div>
 </section>
 
 <section class="final">
   <div class="wrap">
-    <h2 class="disp reveal">Ready to <span class="o">rush?</span></h2>
-    <p class="reveal">Turn quiet viewers into players tonight.</p>
-    <a class="btn btn-gold buy reveal" href="https://flowzeragames.gumroad.com/l/mindrush">Get MIND RUSH — $4.99</a>
+    <h2 class="disp reveal">Ready to <span class="o">play?</span></h2>
+    <p class="reveal">Turn quiet viewers into players tonight. 7 days free, then $5 a month.</p>
+    <a class="btn btn-gold buy reveal" href="#games">Pick your game</a>
   </div>
 </section>
 
 <footer><div class="wrap">
   <a href="#top" aria-label="FlowZeraGames home"><img class="flogo" src="assets/flowzera-logo.png" alt="FlowZeraGames"></a>
-  <div>© <span id="yr">2026</span> FlowZeraGames · Not affiliated with TikTok</div>
+  <div><a href="mailto:andreitufaru@proton.me" style="color:var(--cyan);font-weight:700">andreitufaru@proton.me</a> · © <span id="yr">2026</span> FlowZeraGames · Not affiliated with TikTok</div>
 </div></footer>
 
 <script>
@@ -491,7 +612,7 @@ $('yr').textContent=new Date().getFullYear();
 const nav=$('nav'); addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30),{passive:true});
 
 /* marquee */
-const words=['10,000+ questions','Speed emoji','Scramble round','Red question','Tap Tap x2','Weekly champion','Viewer shop','Daily bonus','Streak x3','All-time leaderboard'];
+const words=['MIND RUSH 2.0','Boss question','Final duel','Mystery words','12,000+ questions','Party Pack','Nitro Rally','Shield & Freeze','Weekly champion','7 days free'];
 $('mq').innerHTML=[...words,...words].map(w=>`<span>${w} ✦</span>`).join('');
 
 /* hero screen swap + chat */
