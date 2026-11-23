@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FlowZeraGames — Interactive games for TikTok LIVE</title>
-<meta name="description" content="Interactive games for TikTok LIVE: MIND RUSH (quiz game show), NITRO RALLY (3D kart racing) and FlowZera PARTY PACK (3 party games), with PRICE RUSH and URSITOAREA coming soon. Your viewers play from the chat. Free 7-day trial, then $5/month per game.">
+<meta name="description" content="Interactive games for TikTok LIVE: MIND RUSH (quiz game show), PRICE RUSH (guess the price), NITRO RALLY (3D kart racing), FlowZera PARTY PACK (3 party games) and URSITOAREA (AI tarot, Romanian). Your viewers play from the chat. Free 7-day trial, then $9.99/month per game, or every game for $20/month.">
 <meta property="og:title" content="FlowZeraGames — games your TikTok LIVE viewers play from the chat">
-<meta property="og:description" content="MIND RUSH 2.0, PARTY PACK and NITRO RALLY. Interactive games for TikTok LIVE. Free 7-day trial, then $5/month per game.">
+<meta property="og:description" content="MIND RUSH 2.0, PRICE RUSH, NITRO RALLY, PARTY PACK and URSITOAREA. Interactive games for TikTok LIVE. Free 7-day trial, then $9.99/month per game.">
 <meta property="og:image" content="https://flowzeragames.vercel.app/assets/og.jpg">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://flowzeragames.vercel.app/">
@@ -327,6 +327,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 .plan{border-radius:16px;padding:12px 12px 12px 18px;background:rgba(0,0,0,.25);border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:10px}
 .plan h4{font-family:Bungee;font-size:18px;letter-spacing:.5px}
 .pcard .plan .btn{width:auto;padding:11px 20px;font-size:15px}
+.pcard .plan .btn{white-space:nowrap;flex:0 0 auto}
+.plan .psub{display:block;font-family:Outfit;font-size:13px;font-weight:600;color:var(--mute);letter-spacing:0;margin-top:3px}
 .trialbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:6px 0 2px}
 .trialbar .t7{font-family:Bungee;font-size:15px;padding:8px 14px;border-radius:12px;background:linear-gradient(135deg,#7ef9ff,var(--violet));color:#fff}
 .pcard.wide{grid-column:1/-1}
@@ -357,10 +359,10 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
       <h1 class="disp">Your chat<span class="o">is the</span><span class="g">controller</span></h1>
       <p class="lead"><b>MIND RUSH 2.0</b> turns your LIVE into a game show: viewers type <b>A, B, C or D</b>, race for speed points, fight a <b>Boss</b> together and settle it in a <b>Final Duel</b>. Plus the <b>Party Pack</b> and <b>Nitro Rally</b>.</p>
       <div class="cta">
-        <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try MIND RUSH free for 7 days</a>
+        <a class="btn btn-gold buy" href="https://whop.com/flowzera-games/products/mind-rush-tiktok-live-quiz/" target="_blank" rel="noopener">Try MIND RUSH free for 7 days</a>
         <a class="btn btn-ghost" href="#play">▶ Play a round</a>
       </div>
-      <div class="trust"><span>7 days free</span><span>Then $5/month per game</span><span>Cancel anytime</span><span>No TikFinity needed</span></div>
+      <div class="trust"><span>7 days free</span><span>Then $9.99/month per game</span><span>Cancel anytime</span><span>No TikFinity needed</span></div>
     </div>
     <div style="position:relative">
       <div class="phone" aria-label="MIND RUSH running on a phone">
@@ -409,7 +411,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
           <h3 class="disp" id="dTitle">Ready to rush?</h3>
           <p id="dText">5 questions · 10 seconds each · 7 bots in the chat</p>
           <button class="btn btn-gold" id="dStart">▶ Start round</button>
-          <div id="dBuy" hidden style="margin-top:14px"><a class="btn btn-ghost buy" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Put this on your LIVE · 7 days free →</a></div>
+          <div id="dBuy" hidden style="margin-top:14px"><a class="btn btn-ghost buy" href="https://whop.com/flowzera-games/products/mind-rush-tiktok-live-quiz/" target="_blank" rel="noopener">Put this on your LIVE · 7 days free →</a></div>
         </div>
       </div>
     </div>
@@ -424,7 +426,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
       <p>No coding, no paid tools, no browser extensions. Every game runs on your PC and reads your LIVE chat directly.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><h3>Start your free trial</h3><p>Email us which game you want. You get the download and a personal license key: 7 days free, then $5/month. Cancel anytime.</p></div>
+      <div class="step reveal"><h3>Start your free trial</h3><p>Pick your game on Whop. You get the download and your personal license key right away: 7 days free, then $9.99/month. Cancel anytime.</p></div>
       <div class="step reveal"><h3>Run START.bat</h3><p>Type your TikTok username once and paste your key. It installs what it needs and opens the game window. Then <code>Go LIVE</code>.</p></div>
       <div class="step reveal"><h3>Capture the window</h3><p>Add the game as a Window Capture in TikTok LIVE Studio or OBS. Your viewers start playing straight away.</p></div>
     </div>
@@ -508,7 +510,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <h3>MIND RUSH</h3>
         <p>The speed quiz game show. Chat answers, speed scores, streaks multiply. Now with the Boss Question, Mystery Words and the Final Duel.</p>
         <div class="gtags"><span>QUIZ</span><span>12,000+ QUESTIONS</span><span>LEADERBOARD</span></div>
-        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#play">Play a round</a></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/mind-rush-tiktok-live-quiz/" target="_blank" rel="noopener">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#play">Play a round</a></div>
       </div>
       <div class="game nr">
         <div class="ttl">NITRO<br>RALLY</div>
@@ -517,7 +519,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <h3>NITRO RALLY</h3>
         <p>A 3D kart race your viewers join from the chat. Up to 24 racers, 3 laps, nitro and surprise super powers.</p>
         <div class="gtags"><span>3D RACING</span><span>24 RACERS</span><span>PODIUM</span></div>
-        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#nitro">See it</a></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/nitro-rally-3d-tiktok-live-kart-racer/" target="_blank" rel="noopener">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#nitro">See it</a></div>
       </div>
       <div class="game pp">
         <div class="ttl">PARTY<br>PACK</div>
@@ -526,25 +528,25 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <h3>PARTY PACK</h3>
         <p>Three party games in one: PUNCHLINE, HIVEMIND and WHAT YEAR?. The chat votes which one comes next.</p>
         <div class="gtags"><span>3 GAMES</span><span>CHAT VOTES</span><span>JACKBOX-STYLE</span></div>
-        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#partypack">See it</a></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/party-pack-3-tiktok-live-party-games/" target="_blank" rel="noopener">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#partypack">See it</a></div>
       </div>
       <div class="game pr">
         <div class="ttl">PRICE<br>RUSH</div>
         <div class="deco tagd" aria-hidden="true"><span class="hole"></span><small>THE PRICE IS</small><b>$<span id="prRoll">??</span></b></div>
-        <span class="pill soon">● COMING SOON</span>
+        <span class="pill on">● AVAILABLE NOW</span>
         <h3>PRICE RUSH</h3>
         <p>A Price-is-Right style show. Viewers type their guess in the chat, 20 seconds per round, the closest guess wins and bullseyes take the spotlight.</p>
         <div class="gtags"><span>GUESS THE PRICE</span><span>3 ROUND TYPES</span><span>LEADERBOARD</span></div>
-        <div class="gbtns"><a class="btn btn-ghost btn-sm" href="mailto:andreitufaru@proton.me?subject=PRICE%20RUSH%20-%20notify%20me&body=Hi%21%20Let%20me%20know%20when%20PRICE%20RUSH%20is%20available.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Notify me</a></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/price-rush-tiktok-live-price-game/" target="_blank" rel="noopener">Try 7 days free</a></div>
       </div>
       <div class="game ur">
         <div class="ttl">Ursi&shy;toarea</div>
         <div class="deco orb" aria-hidden="true"><div class="tc t1"></div><div class="tc t2"></div><div class="ball"><i></i></div><div class="stand"></div></div>
-        <span class="pill soon">● COMING SOON · ROMANIAN</span>
+        <span class="pill on">● AVAILABLE NOW · ROMANIAN</span>
         <h3>URSITOAREA</h3>
         <p>A live AI fortune-teller. When a viewer sends a gift, she looks into her crystal ball, draws their tarot cards and reads them out loud with a talking face and a real voice.</p>
         <div class="gtags"><span>AI AVATAR</span><span>TAROT</span><span>IN ROMANIAN</span></div>
-        <div class="gbtns"><a class="btn btn-ghost btn-sm" href="mailto:andreitufaru@proton.me?subject=URSITOAREA%20-%20notify%20me&body=Hi%21%20Let%20me%20know%20when%20URSITOAREA%20is%20available.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Notify me</a></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/ursitoarea-tarot-ai-pentru-tiktok-live-ro/" target="_blank" rel="noopener">Get it · $13/mo</a></div>
       </div>
   </div>
   <div class="gdots" id="gDots"><button class="gold" aria-label="MIND RUSH"></button><button aria-label="Nitro Rally"></button><button aria-label="Party Pack"></button><button aria-label="Price Rush"></button><button aria-label="Ursitoarea"></button></div>
@@ -564,7 +566,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <li><span class="ic">⏳</span><div><b>WHAT YEAR?</b> Type the year it happened. Closest guess wins.</div></li>
         <li><span class="ic">🏆</span><div><b>Own leaderboard + Host Panel.</b> A separate control window just for you.</div></li>
       </ul>
-      <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try the Party Pack free for 7 days</a>
+      <a class="btn btn-gold buy" href="https://whop.com/flowzera-games/products/party-pack-3-tiktok-live-party-games/" target="_blank" rel="noopener">Try the Party Pack free for 7 days</a>
     </div>
     <div class="phones reveal">
       <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/pp-punch.webp" alt="PUNCHLINE"></div></div>
@@ -588,7 +590,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <li><span class="ic">🎥</span><div><b>A camera that tells the story.</b> It follows the action and zooms on the winner in the last seconds.</div></li>
         <li><span class="ic">🏅</span><div><b>Podium + all-time leaderboard.</b> Saved on your PC with automatic backups.</div></li>
       </ul>
-      <a class="btn btn-gold buy" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try Nitro Rally free for 7 days</a>
+      <a class="btn btn-gold buy" href="https://whop.com/flowzera-games/products/nitro-rally-3d-tiktok-live-kart-racer/" target="_blank" rel="noopener">Try Nitro Rally free for 7 days</a>
     </div>
     <div class="phones reveal">
       <div class="phone"><div class="notch"></div><div class="scr"><img src="assets/nr-race2.webp" alt="Nitro Rally race"></div></div>
@@ -601,14 +603,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
   <div class="wrap">
     <div class="head reveal">
       <div class="kicker">Pricing</div>
-      <h2 class="disp">Try it free. <em>Then $5.</em></h2>
-      <p>Every game comes with a 7-day free trial. After that it's $5 a month per game. Cancel anytime, just send us an email.</p>
+      <h2 class="disp">Try it free. <em>Then $9.99.</em></h2>
+      <p>Every game comes with a 7-day free trial. After that it's $9.99 a month per game, or get every game with ALL-ACCESS for $20 a month. Checkout is on Whop and you can cancel anytime from your Whop account.</p>
     </div>
     <div class="price">
       <div class="pcard reveal">
         <div class="kicker" style="color:var(--gold)">Creator license · per game</div>
         <div class="trialbar"><span class="t7">7 DAYS FREE</span><span style="color:var(--mute);font-weight:700">then</span></div>
-        <div class="amt">$5<small>/ month</small></div>
+        <div class="amt">$9.99<small>/ month</small></div>
         <ul>
           <li>The full game and every update</li>
           <li>Your own license key, linked to your TikTok account</li>
@@ -617,11 +619,14 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
           <li>Cancel anytime, no contract</li>
         </ul>
         <div class="plans">
-          <div class="plan"><h4>MIND RUSH</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
-          <div class="plan"><h4>PARTY PACK</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
-          <div class="plan"><h4>NITRO RALLY</h4><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Start trial</a></div>
+          <div class="plan"><h4>MIND RUSH</h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/mind-rush-tiktok-live-quiz/" target="_blank" rel="noopener">Start trial</a></div>
+          <div class="plan"><h4>PRICE RUSH</h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/price-rush-tiktok-live-price-game/" target="_blank" rel="noopener">Start trial</a></div>
+          <div class="plan"><h4>NITRO RALLY</h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/nitro-rally-3d-tiktok-live-kart-racer/" target="_blank" rel="noopener">Start trial</a></div>
+          <div class="plan"><h4>PARTY PACK</h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/party-pack-3-tiktok-live-party-games/" target="_blank" rel="noopener">Start trial</a></div>
+          <div class="plan"><h4>URSITOAREA <small class="psub">RO · $13/mo · no trial</small></h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/ursitoarea-tarot-ai-pentru-tiktok-live-ro/" target="_blank" rel="noopener">Get it</a></div>
+          <div class="plan"><h4>ALL-ACCESS <small class="psub">every game · $20/mo or $179 lifetime</small></h4><a class="btn btn-gold buy btn-sm" href="https://whop.com/flowzera-games/products/all-access-all-flowzera-tiktok-live-games/" target="_blank" rel="noopener">Get all</a></div>
         </div>
-        <div class="fine">Click a game to email us at <b>andreitufaru@proton.me</b> · You get the download and your license key by email</div>
+        <div class="fine">Secure checkout on <b>Whop</b> · Download and license key delivered instantly · Questions: <b>andreitufaru@proton.me</b></div>
       </div>
       <div class="req reveal">
         <h3>What you need</h3>
@@ -640,7 +645,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 <section class="sec" id="faq" style="padding-top:60px">
   <div class="wrap faq">
     <div class="head reveal"><div class="kicker">FAQ</div><h2 class="disp">Questions?</h2></div>
-    <details><summary>How does the free trial work?</summary><p>Send us an email (any "Start trial" button opens it) with the game you want and your TikTok username. You get the download and a personal license key by email and can play for 7 days for free. After that it's $5 a month per game. If you stop paying, the key stops working at the end of the period you paid for.</p></details>
+    <details><summary>How does the free trial work?</summary><p>Click any "Start trial" button and check out on Whop. You get the download and your personal license key right away and can play for 7 days for free. After that it's $9.99 a month per game (URSITOAREA is $13 a month with no trial, ALL-ACCESS is $20 a month for every game). Cancel anytime from your Whop account. The key stops working at the end of the period you paid for.</p></details>
     <details><summary>Why do I need a license key?</summary><p>The key unlocks the game files and links the game to your TikTok account. It's how we keep the games fair for the creators who pay for them. The game checks the key when it starts and every few minutes. If your internet drops, it keeps running for 30 minutes.</p></details>
     <details><summary>Can I use one key on two TikTok accounts?</summary><p>No. One key works for one creator and one TikTok account. If you change your account, contact us and we'll move it.</p></details>
     <details><summary>Do I need TikFinity or any paid tool?</summary><p>No. Each game includes a small connector that reads your LIVE chat, likes, follows and gifts directly from your username. You don't need to buy anything else.</p></details>
@@ -655,8 +660,8 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 <section class="final">
   <div class="wrap">
     <h2 class="disp reveal">Ready to <span class="o">play?</span></h2>
-    <p class="reveal">Turn quiet viewers into players tonight. 7 days free, then $5 a month.</p>
-    <a class="btn btn-gold buy reveal" href="#games">Pick your game</a>
+    <p class="reveal">Turn quiet viewers into players tonight. 7 days free, then $9.99 a month.</p>
+    <a class="btn btn-gold buy reveal" href="#games">Pick your game</a> <a class="btn btn-ghost reveal" href="https://whop.com/flowzera-games/products/all-access-all-flowzera-tiktok-live-games/" target="_blank" rel="noopener">Get ALL-ACCESS · $20/mo</a>
   </div>
 </section>
 
@@ -671,7 +676,7 @@ $('yr').textContent=new Date().getFullYear();
 const nav=$('nav'); addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30),{passive:true});
 
 /* marquee */
-const words=['MIND RUSH 2.0','Boss question','Final duel','Mystery words','12,000+ questions','Party Pack','Nitro Rally','Price Rush · soon','Ursitoarea · soon','Shield & Freeze','Weekly champion','7 days free'];
+const words=['MIND RUSH 2.0','Boss question','Final duel','Mystery words','12,000+ questions','Party Pack','Nitro Rally','Price Rush','Ursitoarea','All-Access $20','Shield & Freeze','Weekly champion','7 days free'];
 $('mq').innerHTML=[...words,...words].map(w=>`<span>${w} ✦</span>`).join('');
 
 /* hero screen swap + chat */
