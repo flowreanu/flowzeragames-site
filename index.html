@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FlowZeraGames — Interactive games for TikTok LIVE</title>
-<meta name="description" content="Interactive games for TikTok LIVE: MIND RUSH (quiz game show), FlowZera PARTY PACK (3 party games) and NITRO RALLY (3D kart racing). Your viewers play from the chat. Free 7-day trial, then $5/month per game.">
+<meta name="description" content="Interactive games for TikTok LIVE: MIND RUSH (quiz game show), NITRO RALLY (3D kart racing) and FlowZera PARTY PACK (3 party games), with PRICE RUSH and URSITOAREA coming soon. Your viewers play from the chat. Free 7-day trial, then $5/month per game.">
 <meta property="og:title" content="FlowZeraGames — games your TikTok LIVE viewers play from the chat">
 <meta property="og:description" content="MIND RUSH 2.0, PARTY PACK and NITRO RALLY. Interactive games for TikTok LIVE. Free 7-day trial, then $5/month per game.">
 <meta property="og:image" content="https://flowzeragames.vercel.app/assets/og.jpg">
@@ -266,6 +266,45 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
 .pill.new{background:rgba(95,243,255,.12);color:var(--cyan);border:1px solid rgba(95,243,255,.4)}
 @media(max-width:1100px){.games{grid-template-columns:1fr 1fr}.game.mr{grid-column:1/-1}}
 @media(max-width:700px){.games{grid-template-columns:1fr}.game .shot{width:min(150px,40%)}}
+
+/* v3: games carousel */
+.games{--gw:min(400px,86vw);--pad:max(4vw,calc((100vw - 1180px)/2));display:flex!important;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  padding:30px var(--pad) 34px;scroll-padding-inline:var(--pad);overscroll-behavior-x:contain;outline:none}
+.games::-webkit-scrollbar{display:none}
+.games .game{flex:0 0 var(--gw);min-height:680px;scroll-snap-align:start;grid-column:auto!important;transition:transform .4s,opacity .4s}
+@media(max-width:700px){.games .game{min-height:700px;scroll-snap-align:center}.games{scroll-padding-inline:0;padding-inline:calc((100vw - var(--gw))/2)}}
+.games-nav{display:flex;justify-content:space-between;align-items:center;margin-top:-10px}
+.games-nav .strip-nav{margin:0}
+.gcount{font-weight:800;color:var(--mute);letter-spacing:2px;font-size:14px}.gcount b{color:var(--text)}
+.gdots{display:flex;gap:8px;justify-content:center;margin-top:-6px}
+.gdots button{width:8px;height:8px;border-radius:99px;border:0;padding:0;background:rgba(255,255,255,.25);cursor:pointer;transition:width .35s,background .3s}
+.gdots button.on{width:28px;background:var(--text)}.gdots button.gold.on{background:linear-gradient(90deg,#fff2a8,var(--gold),var(--orange))}
+.game.mr{border:2px solid rgba(255,203,61,.75);box-shadow:0 0 0 1px rgba(255,220,120,.25),0 0 50px -6px rgba(255,190,40,.55),0 30px 90px -20px rgba(255,150,30,.5);animation:goldglow 3.2s ease-in-out infinite}
+@keyframes goldglow{50%{box-shadow:0 0 0 1px rgba(255,220,120,.4),0 0 70px 0 rgba(255,200,60,.7),0 30px 100px -16px rgba(255,150,30,.65)}}
+.pill.feat{background:linear-gradient(180deg,#fff2a8,var(--gold) 50%,var(--orange));color:#1a0f00}
+.game.pr{background:radial-gradient(420px 340px at 80% 20%,rgba(30,220,130,.32),transparent 70%),linear-gradient(160deg,#04261a,#06100c)}
+.game.pr .ttl{background:linear-gradient(180deg,#eafff4,#4dffa6 55%,#10b866);-webkit-background-clip:text;background-clip:text;color:transparent}
+.game.ur{background:radial-gradient(420px 340px at 80% 20%,rgba(150,80,255,.42),transparent 70%),radial-gradient(circle,rgba(255,255,255,.35) 1px,transparent 1.5px) 0 0/40px 40px,linear-gradient(160deg,#1d0a40,#0a0418)}
+.game.ur .ttl{font-family:Georgia,serif;font-style:italic;font-weight:900;text-transform:none;font-size:40px;max-width:60%;background:linear-gradient(180deg,#fff3d6,#ffcf7a 50%,#b77cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.deco{position:absolute;pointer-events:none}
+.tagd{right:22px;top:150px;width:200px;padding:20px 16px 18px 50px;rotate:-7deg;border-radius:12px 22px 22px 12px;background:linear-gradient(160deg,#fff8dc,#ffe08a 60%,#f5b62e);color:#1a1205;
+  clip-path:polygon(30px 0,100% 0,100% 100%,30px 100%,0 50%);box-shadow:0 26px 50px -14px rgba(0,0,0,.75);animation:bobd 5s ease-in-out infinite}
+.tagd .hole{position:absolute;left:20px;top:50%;width:12px;height:12px;margin-top:-6px;border-radius:50%;background:#06100c}
+.tagd small{display:block;font-size:10px;font-weight:900;letter-spacing:2px;opacity:.6}
+.tagd b{display:block;font-family:Bungee;font-weight:400;font-size:44px;line-height:1;margin-top:4px}
+@keyframes bobd{50%{transform:translateY(-8px)}}
+.orb{right:18px;top:96px;width:170px;height:196px}
+.game>.pill,.game>h3,.game>p,.game>.gtags,.game>.gbtns{position:relative;z-index:1}
+.orb .tc{position:absolute;left:50%;top:0;width:72px;aspect-ratio:7/12;border-radius:10px;transform-origin:50% 120%;
+  background:radial-gradient(circle at 50% 50%,transparent 0 14px,#ffcf7a 15px 16px,transparent 17px),repeating-linear-gradient(45deg,rgba(255,207,122,.1) 0 2px,transparent 2px 9px),linear-gradient(160deg,#3a1a7a,#150833);
+  box-shadow:0 0 0 1px rgba(255,207,122,.55),inset 0 0 0 5px #150833,inset 0 0 0 6px rgba(255,207,122,.5),0 18px 34px -12px rgba(0,0,0,.8)}
+.orb .t1{translate:-80% 0;rotate:-16deg}.orb .t2{translate:-20% 0;rotate:14deg}
+.orb .ball{position:absolute;left:50%;bottom:24px;translate:-50% 0;width:108px;height:108px;border-radius:50%;overflow:hidden;z-index:2;
+  background:radial-gradient(circle at 34% 28%,rgba(255,255,255,.75),rgba(255,255,255,0) 22%),radial-gradient(circle at 50% 60%,#c9a2ff,#6c3bdc 45%,#1d0a4d 80%);box-shadow:0 0 50px rgba(170,110,255,.65),inset -8px -14px 26px rgba(10,0,40,.65)}
+.orb .ball i{position:absolute;inset:-30%;background:conic-gradient(transparent,rgba(255,207,122,.35),transparent 30%,rgba(120,220,255,.3),transparent 60%,rgba(255,120,220,.3),transparent);filter:blur(12px);animation:spinb 9s linear infinite;mix-blend-mode:screen}
+@keyframes spinb{to{rotate:360deg}}
+.orb .stand{position:absolute;left:50%;bottom:8px;translate:-50% 0;width:84px;height:26px;border-radius:10px 10px 18px 18px;background:linear-gradient(180deg,#e0a64a,#7a4a14)}
+@media(prefers-reduced-motion:reduce){.game.mr,.tagd,.orb .ball i{animation:none}}
 /* game showcase rows */
 .show{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:center}
 .show.rev{grid-template-columns:1.25fr 1fr}
@@ -457,28 +496,21 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
     <div class="head reveal">
       <div class="kicker">The games</div>
       <h2 class="disp">Made by <em>FlowZeraGames</em></h2>
-      <p>Interactive games built for vertical LIVE, tested on real streams. Every game has its own 7-day free trial.</p>
+      <p>Interactive games built for vertical LIVE, tested on real streams. Every available game has its own 7-day free trial. Swipe through all five.</p>
     </div>
-    <div class="games">
-      <div class="game mr reveal">
+    <div class="games-nav reveal"><span class="gcount"><b id="gNow">01</b> / 05</span><div class="strip-nav"><button id="gPrev" aria-label="Previous game">←</button><button id="gNext" aria-label="Next game">→</button></div></div>
+  </div>
+  <div class="games reveal" id="gTrack" tabindex="0" aria-roledescription="carousel" aria-label="FlowZeraGames games">
+      <div class="game mr">
         <img class="logo" src="assets/mindrush-logo.webp" alt="MIND RUSH logo">
         <img class="shot" src="assets/mr-duel2.webp" alt="">
-        <span class="pill new">● NEW · VERSION 2.0</span>
+        <span class="pill feat">★ FEATURED · VERSION 2.0</span>
         <h3>MIND RUSH</h3>
         <p>The speed quiz game show. Chat answers, speed scores, streaks multiply. Now with the Boss Question, Mystery Words and the Final Duel.</p>
         <div class="gtags"><span>QUIZ</span><span>12,000+ QUESTIONS</span><span>LEADERBOARD</span></div>
         <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=MIND%20RUSH%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20MIND%20RUSH.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#play">Play a round</a></div>
       </div>
-      <div class="game pp reveal">
-        <div class="ttl">PARTY<br>PACK</div>
-        <img class="shot" src="assets/pp-hub.webp" alt="">
-        <span class="pill on">● AVAILABLE NOW</span>
-        <h3>PARTY PACK</h3>
-        <p>Three party games in one: PUNCHLINE, HIVEMIND and WHAT YEAR?. The chat votes which one comes next.</p>
-        <div class="gtags"><span>3 GAMES</span><span>CHAT VOTES</span><span>JACKBOX-STYLE</span></div>
-        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#partypack">See it</a></div>
-      </div>
-      <div class="game nr reveal">
+      <div class="game nr">
         <div class="ttl">NITRO<br>RALLY</div>
         <img class="shot" src="assets/nr-race2.webp" alt="">
         <span class="pill on">● AVAILABLE NOW</span>
@@ -487,8 +519,35 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;
         <div class="gtags"><span>3D RACING</span><span>24 RACERS</span><span>PODIUM</span></div>
         <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=NITRO%20RALLY%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20NITRO%20RALLY.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#nitro">See it</a></div>
       </div>
-    </div>
+      <div class="game pp">
+        <div class="ttl">PARTY<br>PACK</div>
+        <img class="shot" src="assets/pp-hub.webp" alt="">
+        <span class="pill on">● AVAILABLE NOW</span>
+        <h3>PARTY PACK</h3>
+        <p>Three party games in one: PUNCHLINE, HIVEMIND and WHAT YEAR?. The chat votes which one comes next.</p>
+        <div class="gtags"><span>3 GAMES</span><span>CHAT VOTES</span><span>JACKBOX-STYLE</span></div>
+        <div class="gbtns"><a class="btn btn-gold buy btn-sm" href="mailto:andreitufaru@proton.me?subject=PARTY%20PACK%20-%20free%207-day%20trial&body=Hi%21%20I%27d%20like%20to%20start%20the%20free%207-day%20trial%20of%20PARTY%20PACK.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Try 7 days free</a><a class="btn btn-ghost btn-sm" href="#partypack">See it</a></div>
+      </div>
+      <div class="game pr">
+        <div class="ttl">PRICE<br>RUSH</div>
+        <div class="deco tagd" aria-hidden="true"><span class="hole"></span><small>THE PRICE IS</small><b>$<span id="prRoll">??</span></b></div>
+        <span class="pill soon">● COMING SOON</span>
+        <h3>PRICE RUSH</h3>
+        <p>A Price-is-Right style show. Viewers type their guess in the chat, 20 seconds per round, the closest guess wins and bullseyes take the spotlight.</p>
+        <div class="gtags"><span>GUESS THE PRICE</span><span>3 ROUND TYPES</span><span>LEADERBOARD</span></div>
+        <div class="gbtns"><a class="btn btn-ghost btn-sm" href="mailto:andreitufaru@proton.me?subject=PRICE%20RUSH%20-%20notify%20me&body=Hi%21%20Let%20me%20know%20when%20PRICE%20RUSH%20is%20available.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Notify me</a></div>
+      </div>
+      <div class="game ur">
+        <div class="ttl">Ursi&shy;toarea</div>
+        <div class="deco orb" aria-hidden="true"><div class="tc t1"></div><div class="tc t2"></div><div class="ball"><i></i></div><div class="stand"></div></div>
+        <span class="pill soon">● COMING SOON · ROMANIAN</span>
+        <h3>URSITOAREA</h3>
+        <p>A live AI fortune-teller. When a viewer sends a gift, she looks into her crystal ball, draws their tarot cards and reads them out loud with a talking face and a real voice.</p>
+        <div class="gtags"><span>AI AVATAR</span><span>TAROT</span><span>IN ROMANIAN</span></div>
+        <div class="gbtns"><a class="btn btn-ghost btn-sm" href="mailto:andreitufaru@proton.me?subject=URSITOAREA%20-%20notify%20me&body=Hi%21%20Let%20me%20know%20when%20URSITOAREA%20is%20available.%0A%0AMy%20TikTok%20username%3A%20%40%0A">Notify me</a></div>
+      </div>
   </div>
+  <div class="gdots" id="gDots"><button class="gold" aria-label="MIND RUSH"></button><button aria-label="Nitro Rally"></button><button aria-label="Party Pack"></button><button aria-label="Price Rush"></button><button aria-label="Ursitoarea"></button></div>
 </section>
 
 <section class="sec pp" id="partypack" style="padding-top:60px">
@@ -612,7 +671,7 @@ $('yr').textContent=new Date().getFullYear();
 const nav=$('nav'); addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>30),{passive:true});
 
 /* marquee */
-const words=['MIND RUSH 2.0','Boss question','Final duel','Mystery words','12,000+ questions','Party Pack','Nitro Rally','Shield & Freeze','Weekly champion','7 days free'];
+const words=['MIND RUSH 2.0','Boss question','Final duel','Mystery words','12,000+ questions','Party Pack','Nitro Rally','Price Rush · soon','Ursitoarea · soon','Shield & Freeze','Weekly champion','7 days free'];
 $('mq').innerHTML=[...words,...words].map(w=>`<span>${w} ✦</span>`).join('');
 
 /* hero screen swap + chat */
@@ -626,6 +685,24 @@ setInterval(()=>{const b=bots[Math.random()*bots.length|0]; const m=document.cre
 
 /* rounds strip */
 document.querySelectorAll('.strip-nav button').forEach(b=>b.onclick=()=>$('strip').scrollBy({left:b.dataset.d*286,behavior:'smooth'}));
+
+
+/* games carousel */
+{const tr=$('gTrack'),cards=[...tr.querySelectorAll('.game')],dots=[...document.querySelectorAll('#gDots button')];let cur=-1,user=false,want=-1;
+ const go=i=>{i=(i+cards.length)%cards.length;want=i;const c=cards[i];const mob=innerWidth<=700;
+   tr.scrollTo({left:mob?c.offsetLeft-(tr.clientWidth-c.offsetWidth)/2:c.offsetLeft-parseFloat(getComputedStyle(tr).paddingLeft),behavior:'smooth'});setTimeout(mark,450);};
+ const mark=()=>{const pl=innerWidth<=700?(tr.clientWidth/2):parseFloat(getComputedStyle(tr).paddingLeft);let b=0,d=1e9;
+   cards.forEach((c,i)=>{const x=innerWidth<=700?c.offsetLeft+c.offsetWidth/2-tr.scrollLeft:c.offsetLeft-tr.scrollLeft;const m=Math.abs(x-pl);if(m<d){d=m;b=i}});
+   if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4 && innerWidth>700) b=want>=0?want:cards.length-1;
+   if(b===cur)return;cur=b;dots.forEach((x,i)=>x.classList.toggle('on',i===b));$('gNow').textContent=String(b+1).padStart(2,'0');};
+ let raf=0;tr.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(mark)},{passive:true});tr.addEventListener('scrollend',()=>{cur=-1;mark()});
+ const stop=()=>{user=true};['pointerdown','wheel','touchstart','keydown'].forEach(e=>tr.addEventListener(e,stop,{passive:true}));
+ $('gPrev').onclick=()=>{stop();go(cur-1)};$('gNext').onclick=()=>{stop();go(cur+1)};dots.forEach((x,i)=>x.onclick=()=>{stop();go(i)});
+ tr.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(cur-1)}});
+ mark();
+ const roll=$('prRoll'),prices=[19,249,64,1199,35,89,450,129,799];let k=0;
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches) setInterval(()=>{let n=0;const t=prices[k++%prices.length];const iv=setInterval(()=>{roll.textContent=++n<9?Math.floor(Math.random()*999+1):t.toLocaleString('en-US');if(n>=9)clearInterval(iv)},60)},2600);
+}
 
 /* reveal */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
